@@ -1,0 +1,224 @@
+/*
+  CLASE 12 DE OCTUBRE - SPRINT 4 (RETO 4) - CSS VotApp 
+*/
+
+#cuerpo {
+  width: 77%;
+  background-color: antiquewhite;
+  margin: 2px auto;
+  padding: 1px auto;
+}
+
+#titulo {
+  text-align: center;
+  color: slategray;
+}
+
+#titulo2 {
+  text-align: center;
+  font-size: 40;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(255, 209, 150);
+  padding: 20px;
+}
+
+#seccion {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22;
+}
+
+#info {
+  width: 50%;
+  float: left;
+  margin: 50px auto;
+  padding: 1px auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17;
+}
+
+p {
+  width: 600px;
+}
+
+#info2 {
+  width: 50%;
+  margin: 50px auto;
+  float: left;
+  padding: 1px auto;
+}
+
+
+#styleImg {
+  height: 500px;
+  width: 600px;
+}
+
+#pie {
+  clear: both;
+  background-color: rgb(255, 209, 150);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12;
+}
+
+#btnPartidos {
+  clear: both;
+  float: inline-end;
+  display: block;
+  width: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: rgb(106, 181, 255);
+  border-radius: 10px;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+  padding: 5px;
+
+}
+
+#btnPartidos:hover {
+  background-color: black;
+  border: 2px solid rgb(106, 181, 255);
+  color: rgb(106, 181, 255);
+}
+
+#aside {
+  display: block;
+  width: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-color: rgb(106, 181, 255);
+  border-radius: 10px;
+  color: black;
+  border: 2px solid black;
+  text-decoration: none;
+  margin: 1px;
+  padding: 5px;
+}
+
+#aside:hover {
+  background-color: black;
+  border: 2px solid rgb(106, 181, 255);
+  color: rgb(106, 181, 255);
+}
+
+#Margen {
+  margin: 8px;
+}
+
+/* NUEVAS REGLAS INCUÍDAS DESDE EL SPRINT 3 */
+
+/* 1er Botón */
+#btnVot1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 1px;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+#btnVot1:hover {
+  background-color: black;
+  color: white;
+}
+
+#btnVot1:active {
+  /* Diseño cuando se esté dando click sobre el botón */
+  background-color: white;
+  color: darkred;
+  border: 2px solid darkred;
+}
+
+/* 2do Botón */
+
+#btnVot2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 1px;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+#btnVot2:hover {
+  background-color: black;
+  color: white;
+}
+
+#btnVot2:active {
+  background-color: white;
+  color: darkred;
+  border: 2px solid darkred;
+}
+
+/* 3er Botón */
+
+#btnVot3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 1px;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+#btnVot3:hover {
+  background-color: black;
+  color: white;
+}
+
+#btnVot3:active {
+  background-color: white;
+  color: darkred;
+  border: 2px solid darkred;
+}
+
+/* 4to Botón */
+
+#btnVot4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 1px;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+#btnVot4:hover {
+  background-color: black;
+  color: white;
+}
+
+#btnVot4:active {
+  background-color: white;
+  color: darkred;
+  border: 2px solid darkred;
+}
+
+/* REGLA para centrar a "celdaPer" */
+#celdaPer {
+  text-align: center;
+}
+
+/* REGLA para el "btnCarga" */
+
+#btnCarga {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  size: 12;
+  padding: 7px;
+  font-weight: 200;
+}
+
+/* REGLA para el contenedor de RESULTADOS */
+
+#EstVot {
+  align-items: center;
+}
+
+/* REGLA para el contenedor "Total" */
+
+#Total {
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22;  
+}
