@@ -27,4 +27,9 @@ public class VotanteControlador {
 	public String Back() {
 		return "/Sprint3";
 	}
+	
+	@GetMapping("/addVotante")
+	public String addVotante() {
+		return "/addVotante";
+	}
 }
