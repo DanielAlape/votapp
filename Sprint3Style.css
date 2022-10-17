@@ -9,6 +9,20 @@
   padding: 1px auto;
 }
 
+#addVot {
+  width: 40%;
+  background-color: antiquewhite;
+  margin: 2px auto;
+  padding: 1px auto;
+}
+
+.textClass {
+  width: 100%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17;
+}
+
 #titulo {
   text-align: center;
   color: slategray;
@@ -35,6 +49,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 17;
 }
+
 
 p {
   width: 600px;
