@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <title>Registrar Votante</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/Sprint3Style.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/css/bootstrap.css}">
+  </head>
+  
+  <body id="cuerpo">
+    <div class="textClass">
+      <h3>Registrar Votante</h3>
+    </div>
+    <form th:action="@{/saveVotante}" method="post" th:object=${votante}>
+      <div id="conForm">
+        <div class="mb-3">
+          <label for="labidentificacion" class="form-label">Identificación:</label>
+          <input type="text" class="form-control" name="identificacion" id="identificacion" aria-describedby="identificacionHelp" required>
+          <div id="identificacionHelp" class="form-text">Digite el número de Identificación del Votante</div>
+          </div>
+        <div class="mb-3">
+          <label for="labnombres" class="form-label">Nombres:</label>
+          <input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="nombresHelp" required style="text-align: left;">
+          <div id="nombresHelp" class="form-text">Digite los Nombres</div>
+        </div>
+  
+</html>
