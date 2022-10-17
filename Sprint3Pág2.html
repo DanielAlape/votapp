@@ -1,24 +1,26 @@
 <!--
    CLASE 12 DE OCTUBRE - SPRINT 4 (RETO 4) - SEGUNDA PÁGINA (VotApp)
 -->
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
     <title>VotApp</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Sprint3Style.css">
-    <link rel="stylesheet" href="bootstrap-5.2.1-dist/css/bootstrap.css">
-    <script type="text/javascript" src="JSprint3.js"></script>
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/Sprint3Style.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/css/bootstrap.css}">
+    <script type="text/javascript" th:src="@{/js/JSprint3.js}"></script>
 </head>
 
 <body>
+    
     <header id="titulo2">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <center><strong>Partidos de candidatos presidenciales - Estadisticas (VotaApp)</strong></center>
     </header>
-
-    <body>
 
         <section id="seccion">
 
@@ -63,7 +65,7 @@
 
         <br>
         <center>
-            <a id="aside" href="Sprint3.html">Volver a la página principal</a>
+            <a id="aside" th:href="@{/back}">Volver a la página principal</a>
         </center>
 
         <br><br><br><br><br><br><br><br><br>
@@ -71,10 +73,10 @@
             © Copyright Tripulantes G05 Misión TIC 2022 UNAB
             <ul>
                 Equipo de Trabajo:
-                Daniel Alape, Néstor Heredia, Henry Matallana, Ricardo Navarro y Jose Perez
+                Daniel Alape, Néstor Heredia, Henry Matallana, Ricardo Navarro, Jose Perez y Cristian Oviedo
             </ul>
         </footer>
+        
     </body>
-</body>
 
 </html>
