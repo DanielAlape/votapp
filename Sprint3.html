@@ -83,7 +83,7 @@
                                     Javeriana,
                                     Universidad Católica de Lovaina (Bélgica) y Universidad de Salamanca (España).
                                 </li>
-                                <br><br>
+                                <br>
                             </ul>
                             <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
                             <center><input type="button" id="btnVot1" value="Votar" onclick="javascript:votar(0);">
@@ -98,7 +98,7 @@
                                 <li><strong>Estudios:</strong> Ingeniero civil, Universidad de Medellín (2001);
                                     Especialización en alta gerencia, Universidad Pontificia Bolivariana, Medellín.
                                 </li>
-                                <br>
+                                <br><br>
                             </ul>
                             <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
                             <center><input type="button" id="btnVot2" value="Votar" onclick="javascript:votar(1);">
@@ -121,7 +121,7 @@
                                 <li><strong>Fecha Nac:</strong> 26 de marzo de 1945</li>
                                 <li><strong>Edad:</strong> 77 años</li>
                                 <li><strong>Estudios:</strong> Universidad Nacional de Colombia (Ingeniería)</li>
-                                <br><br>
+                                <br><br><br>
                             </ul>
                             <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
                             <center><input type="button" id="btnVot3" value="Votar" onclick="javascript:votar(2);">
@@ -177,13 +177,13 @@
 
     </div>
 
-    <center><a id="btnPartidos" href="Sprint3Pág2.html">Ir a partidos políticos</a></center>
+    <center><a id="btnPartidos" th:href="@{/pag2}">Ir a partidos políticos</a></center>
 
     <footer id="pie">
         © Copyright Tripulantes G05 Misión TIC 2022 UNAB
         <ul>
             Equipo de Trabajo:
-            Daniel Alape, Néstor Heredia, Henry Matallana, Ricardo Navarro y Jose Perez
+            Daniel Alape, Néstor Heredia, Henry Matallana, Ricardo Navarro, Jose Perez y Cristian Oviedo
         </ul>
     </footer>
 </body>
