@@ -9,12 +9,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class VotanteControlador {
-	
+
 	@Autowired
 	private VotanteService votanteService;
 
 	@GetMapping("/votapp")
-	public String despVotapp(){
+	public String despVotapp() {
+		return "/Sprint3";
+	}
+
+	@GetMapping("/pag2")
+	public String Pag2() {
+		return "/Sprint3Pág2";
+	}
+	
+	@GetMapping("/back")
+	public String Back() {
 		return "/Sprint3";
 	}
 }
