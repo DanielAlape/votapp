@@ -1,83 +1,194 @@
-/*
-  CLASE 12 DE OCTUBRE - SPRINT 4 (RETO 4) - JS (VotApp)
-*/
+<!--
+   CLASE 12 DE OCTUBRE - SPRINT 4 (RETO 4) - VotApp HTML 
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-var vectorCandidatos = new Array(4); // 4 Índices para 4 candidatos
+<head>
+    <title>VotApp</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/Sprint3Style.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/css/bootstrap.css}">
+    <script type="text/javascript" th:src="@{/js/JSprint3.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <!-- URL de librería para gráfico -->
+</head>
 
-// Se incia el conteo de votos desde 0 para cada candidato
-vectorCandidatos[0] = 0;
-vectorCandidatos[1] = 0;
-vectorCandidatos[2] = 0;
-vectorCandidatos[3] = 0;
+<body id="cuerpo">
+    <header id="titulo">
+        <title>VotApp</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="Sprint3Style.css">
+    </header>
 
-// Función que suma un 1 cada vez que se da click sobre "Votar" en determinado candidato
-function votar(candidato) {
-  vectorCandidatos[candidato] = vectorCandidatos[candidato] + 1; // Le suma 1 al valor del índice
-  alert("Gracias por su voto!");
-}
+    <section id="info">
+        <table align="center">
+            <tr>
+                <td><img src="img/votar.webp" width="100" height="100"></td>
+                <td>
+                    <center>
+                        <font size="13"><strong>Selección de candidatos (VotaApp)</strong></font>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <p align="justify">
+            Este es un sitio web de uso específico. En esta página usted podrá seleccionar al candidato
+            presidencial
+            por el que desea votar. A continuación se mostrarán los candidatos vigentes con su respectiva foto
+            actualizada.
+            Abajo de cada imagen encontrará una pequeña descripción de los datos personales más relevantes del
+            candidato.
+            Si tiene preguntas,dudas, sugerencias o si desea obtener mayor información acerca de las propuestas
+            y
+            proyectos
+            de cada candidato o del partido que representa, abajo encontrará un vínculo para más información.
+            Para poder seleccionar al candidato de su preferencia, solo debe dar click sobre el cuadro en blanco
+            que se
+            encuentra al costado inferior del perfil de cada candidato, una vez hecho este paso, luego debe dar
+            click
+            sobre
+            el botón guardar que se encuentra en la parte final de esta página. Cabe aclarar que solo puede
+            seleccionar
+            un
+            solo candidato, este será registrado y tomado en cuenta en el escrutinio de la elección para
+            presidencia
+            Colombia 2022. Agradecemos su participación y esperamos que esta información le haya sido de ayuda.
+        </p>
+        <img src="img/elecciones.jpg" id="styleImg">
+    </section>
 
-// Función que nos muestra el resultado o el escrutinio de la votación
-function resultados() {
-  let total = vectorCandidatos[0] + vectorCandidatos[1] + vectorCandidatos[2] + vectorCandidatos[3];
-  let porCan1 = (vectorCandidatos[0] / total) * 100;
-  let porCan2 = (vectorCandidatos[1] / total) * 100;
-  let porCan3 = (vectorCandidatos[2] / total) * 100;
-  let porCan4 = (vectorCandidatos[3] / total) * 100;
+    <br>
+    <aside id="info2">
 
-  let nodoParrafo = document.createElement('p');
-  let nodoParrafo2 = document.createElement('p');
-  let nodoParrafo3 = document.createElement('p');
-  let nodoParrafo4 = document.createElement('p');
+        <form name="selección">
+            <table align="center" border="2" class="table table-bordered border-danger">
+                <thead>
+                    <tr>
+                        <th id="celdaPer">Gustavo Petro</th>
+                        <th id="celdaPer">Federico Gutiérrez</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="50">
+                            <center><img src="img/petro.jpg" width="300" height="200"></center>
+                            <ul>
+                                <li><strong>Nombre:</strong> Gustavo Francisco Petro Urrego</li>
+                                <li><strong>Fecha Nac:</strong> 19 de abril de 1960</li>
+                                <li><strong>Edad:</strong> 62 años</li>
+                                <li><strong>Estudios:</strong> Universidad Externado de Colombia, ESAP, Universidad
+                                    Javeriana,
+                                    Universidad Católica de Lovaina (Bélgica) y Universidad de Salamanca (España).
+                                </li>
+                                <br>
+                            </ul>
+                            <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
+                            <center><input type="button" id="btnVot1" value="Votar" onclick="javascript:votar(0);">
+                            </center>
+                        </td>
+                        <td width="50">
+                            <center><img src="img/federico.jpg" width="300" height="200"></center>
+                            <ul>
+                                <li><strong>Nombre:</strong> Federico Andrés Gutiérrez Zuluaga (FICO)</li>
+                                <li><strong>Fecha Nac:</strong> 28 de noviembre de 1974</li>
+                                <li><strong>Edad:</strong> 48 años</li>
+                                <li><strong>Estudios:</strong> Ingeniero civil, Universidad de Medellín (2001);
+                                    Especialización en alta gerencia, Universidad Pontificia Bolivariana, Medellín.
+                                </li>
+                                
+                            </ul>
+                            <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
+                            <center><input type="button" id="btnVot2" value="Votar" onclick="javascript:votar(1);">
+                            </center>
+                            <br>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th id="celdaPer">Rodolfo Hernández</th>
+                        <th id="celdaPer">Sergio Fajardo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="50">
+                            <center><img src="img/rodolfo.jpg" width="300" height="200"></center>
+                            <ul>
+                                <li><strong>Nombre:</strong> Rodolfo Hernández Suárez</li>
+                                <li><strong>Fecha Nac:</strong> 26 de marzo de 1945</li>
+                                <li><strong>Edad:</strong> 77 años</li>
+                                <li><strong>Estudios:</strong> Universidad Nacional de Colombia (Ingeniería)</li>
+                                <br>
+                            </ul>
+                            <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
+                            <center><input type="button" id="btnVot3" value="Votar" onclick="javascript:votar(2);">
+                            </center>
+                            <br>
+                        </td>
+                        <td width="50">
+                            <center><img src="img/sergio.jpg" width="300" height="200"></center>
+                            <ul>
+                                <li><strong>Nombre:</strong> Sergio Fajardo Valderrama</li>
+                                <li><strong>Fecha Nac:</strong> 19 de junio de 1956</li>
+                                <li><strong>Edad:</strong> 62 años</li>
+                                <li><strong>Estudios:</strong> docente, académico, matemático y político colombiano.
+                                    Exalcalde de Medellín y
+                                    exgobernador de Antioquia
+                                </li>
+                                
+                            </ul>
+                            <!-- Botón que llama a la función "votar" del JS, eviandole (como parámetro) el índice del candidato -->
+                            <center><input type="button" id="btnVot4" value="Votar" onclick="javascript:votar(3);">
+                            </center>
+                            <br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </aside>
 
-  let texto = document.createTextNode("Votos Candidato 1: " + vectorCandidatos[0] + " - Porcentaje: " + porCan1 + "%");
-  let texto2 = document.createTextNode("Votos Candidato 2: " + vectorCandidatos[1] + " - Porcentaje: " + porCan2 + "%");
-  let texto3 = document.createTextNode("Votos Candidato 3: " + vectorCandidatos[2] + " - Porcentaje: " + porCan3 + "%");
-  let texto4 = document.createTextNode("Votos Candidato 4: " + vectorCandidatos[3] + " - Porcentaje: " + porCan4 + "%");
+<br>
+    <div id="Total">
+        <center>
+            <font size="5"><strong>Estadisticas de la Votación</strong></font>
+        </center>
+        <br><br><br><br><br>
+        <form>
+            <div id="btnCarga">
+                <!-- Botón que llama a la función "resultados()" del JS "JSprint3.js" -->
+                <center><input class="btn btn-info" id="btnCarga" value="CARGAR VOTOS"
+                        onclick="javascript:resultados();"></center>
+            </div>
+        </form>
+        <br>
+        <!-- En este contendor irán los resultados como párrafo-->
 
-  nodoParrafo.appendChild(texto);
-  nodoParrafo2.appendChild(texto2);
-  nodoParrafo3.appendChild(texto3);
-  nodoParrafo4.appendChild(texto4);
+        <center>
+            <div id="EstVot"></div>
+        </center>
 
-  let elementoDiv = document.getElementById('EstVot');
-  elementoDiv.appendChild(nodoParrafo);
-  elementoDiv.appendChild(nodoParrafo2);
-  elementoDiv.appendChild(nodoParrafo3);
-  elementoDiv.appendChild(nodoParrafo4);
+        <!-- Aqúi se colocará la GRÁFICA de los resultados -->
 
+        <center>
+            <canvas id="grafica"></canvas>
+        </center>
 
-  // CÓDIGO DE LA GRÁFICA:
+    </div>
 
-  // Obtener una referencia al elemento canvas del DOM
-  const $grafica = document.querySelector("#grafica");
-  // Las etiquetas son las que van en el eje X. 
-  const etiquetas = ["Petro", "Fico", "Rodolfo", "Fajardo"]
-  // Podemos tener varios conjuntos de datos. Comencemos con uno
-  const datosVotos = {
-    label: "Total de votos",
-    data: [vectorCandidatos[0], vectorCandidatos[1], vectorCandidatos[2], vectorCandidatos[3]], // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
-    backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
-    borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
-    borderWidth: 1,// Ancho del borde
-  };
-  new Chart($grafica, {
-    type: 'line',// Tipo de gráfica
-    data: {
-      labels: etiquetas,
-      datasets: [
-        datosVotos,
-        // Aquí más datos...
-      ]
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }],
-      },
-    }
-  });
+    <center><a id="btnPartidos" th:href="@{/pag2}">Ir a partidos políticos</a></center>
 
-}
+    <footer id="pie">
+        © Copyright Tripulantes G05 Misión TIC 2022 UNAB
+        <ul>
+            Equipo de Trabajo:
+            Daniel Alape, Néstor Heredia, Henry Matallana, Ricardo Navarro, Jose Perez y Cristian Oviedo
+        </ul>
+    </footer>
+</body>
+
+</html>
