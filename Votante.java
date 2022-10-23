@@ -12,7 +12,7 @@ public class Votante {
 	private String nombres;
 	private String apellidos;
 	private String fechaNac;
-	private String fehcaExpCed;
+	private String fechaExpCed;
 	private int lugarNac;
 	private int lugarRes;
 	private int movil;
@@ -51,11 +51,11 @@ public class Votante {
 	public void setFechaNac(String fechaNac) {
 		this.fechaNac = fechaNac;
 	}
-	public String getFehcaExpCed() {
-		return fehcaExpCed;
+	public String getFechaExpCed() {
+		return fechaExpCed;
 	}
-	public void setFehcaExpCed(String fehcaExpCed) {
-		this.fehcaExpCed = fehcaExpCed;
+	public void setFechaaExpCed(String fechaExpCed) {
+		this.fechaExpCed = fechaExpCed;
 	}
 	public int getLugarNac() {
 		return lugarNac;
