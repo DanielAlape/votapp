@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Editar Votante</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/Sprint3Style.css}">
+	<link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/css/bootstrap.css}">
+</head>
+
+<body id="addVot">
+	<div class="textClass">
+		<h2>Editar Votante</h2>
+	</div>
+	<br>
+	<form th:action="@{/saveVotante}" method="post" th:object=${votante}>
+		<div class="mb-3">
+			<input type="hidden" class="form-control" name="codVotante" id="codVotante" aria-describedby="codHelp"
+				th:value="*{codVotante}">
+		</div>
+		<div id="conForm">
+			<div class="mb-3">
+				<label for="labidentificacion" class="form-label">Identificación:</label>
+				<input type="number" class="form-control" name="identificacion" id="identificacion"
+					aria-describedby="identificacionHelp" th:value="*{identificacion}" required>
+				<div id="identificacionHelp" class="form-text">Digite el número de Identificación del Votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="labnombres" class="form-label">Nombres:</label>
+				<input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="nombresHelp"
+					th:value="*{nombres}" required>
+				<div id="nombresHelp" class="form-text">Digite los nombres del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="labapellidos" class="form-label">Apellidos:</label>
+				<input type="text" class="form-control" name="apellidos" id="apellidos" aria-describedby="apellidosHelp"
+					th:value="*{apellidos}" required>
+				<div id="apellidosHelp" class="form-text">Digite los apellidos del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="labfechaNac" class="form-label">Fecha de Nacimiento:</label>
+				<input type="date" class="form-control" name="fechaNac" id="fechaNac" aria-describedby="fechaNacHelp"
+					th:value="*{fechaNac}" required>
+				<div id="fechaNacHelp" class="form-text">Seleccione la fecha de nacimiento del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="labfechaExpCed" class="form-label">Fecha de Expedición:</label>
+				<input type="date" class="form-control" name="fechaExpCed" id="fechaExpCed"
+					aria-describedby="fechaExpCedHelp" th:value="*{fechaExpCed}" required>
+				<div id="fechaExpCedHelp" class="form-text">Seleccione la fecha de expedición del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="lablugarNac" class="form-label">Lugar de Nacimiento:</label>
+				<select class="form-select" aria-label="Default select example">
+					<option value="1">Bogotá D.C</option>
+					<option value="2">Barranquilla</option>
+					<option value="3">Bucaramanga</option>
+					<option value="4">Cali</option>
+					<option value="5">Cartegena</option>
+					<option value="6">Cucutá</option>
+					<option value="7">Medellín</option>
+					<option value="8">Santa Marta</option>
+				</select>
+				<div id="lugarNacHelp" class="form-text">Seleccione el lugar de nacimiento del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="lablugarRes" class="form-label">Lugar de Residencia:</label>
+				<select class="form-select" aria-label="Default select example">
+					<option value="1">Bogotá D.C</option>
+					<option value="2">Barranquilla</option>
+					<option value="3">Bucaramanga</option>
+					<option value="4">Cali</option>
+					<option value="5">Cartegena</option>
+					<option value="6">Cucutá</option>
+					<option value="7">Medellín</option>
+					<option value="8">Santa Marta</option>
+				</select>
+				<div id="lugarResHelp" class="form-text">Seleccione el lugar de residencia del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="labmovil" class="form-label">Teléfono:</label>
+				<input type="number" class="form-control" name="movil" id="movil" aria-describedby="movilHelp" th:value="*{movil}" required>
+				<div id="movilHelp" class="form-text">Digite el teléfono movil del votante</div>
+			</div>
+			<div class="mb-3">
+				<label for="labcorreo" class="form-label">Correo:</label>
+				<input type="email" class="form-control" name="correo" id="correo" aria-describedby="correoHelp"
+					th:value="*{correo}" required>
+				<div id="correoHelp" class="form-text">Digite el correo electrónico del votante</div>
+			</div>
+
+			<label for="sexo" class="form-label">Sexo:</label>
+
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="sexo" id="sexo" checked>
+				<label class="form-check-label" for="sexo">
+					Femenino
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="sexo" id="sexo">
+				<label class="form-check-label" for="sexo">
+					Masculino
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="sexo" id="sexo">
+				<label class="form-check-label" for="sexo">
+					No aplica
+				</label>
+			</div>
+			<div id="sexoHelp" class="form-text">Seleccione un sexo</div>
+			<br>
+			<!-- Botón Submit -->
+			<center><button type="submit" class="btn btn-outline-secondary">Guardar Cambios</button></center>
+			<br>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Editar Votante</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/Sprint3Style.css}">
+	<link rel="stylesheet" th:href="@{/bootstrap-5.2.1-dist/css/bootstrap.css}">
+</head>
+
+<body>
+	<br>
+<div class="textClass" id="atRes">
+		<h2> Atributos del registro</h2>
+</div>
+	<table id="mostvot" class="table table-striped">
+		<tr>
+				<td class="titulo">
+				   <h5>Código</h5>
+				</td>
+				<td class="titulo">
+				   <h5>Identificación</h5>
+				</td>
+				<td class="titulo">
+				   <h5>Nombres y Apellidos</h5>
+				</td>
+				<td class="titulo">
+				   <h5>FechaNac</h5>
+				</td>
+				<td class="titulo">
+				   <h5>FechaExpCed</h5>
+				</td>
+				<td class="titulo">
+				   <h5>LugarNac</h5>
+				</td>
+				<td class="titulo">
+				   <h5>LugarRes</h5>
+				</td>
+				<td class="titulo">
+				   <h5>Móvil</h5>
+				</td>
+				<td class="titulo">
+				   <h5>Sexo</h5>
+				</td>
+				<td class="titulo">
+				   <h5>Correo</h5>
+				</td>
+			</tr>
+		<tr>
+		    <td class="textoTab">
+				<font th:text="${votante.codVotante}"></font>
+			</td>
+			<td class="textoTab">
+				<font th:text="${votante.identificacion}"></font>
+			</td>
+			<td class="textoTab">
+				<font th:text="${votante.nombres} + ' ' + ${votante.apellidos}"></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.fechaNac}></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.fechaExpCed}></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.lugarNac}></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.lugarRes}></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.movil}></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.sexo}></font>
+			</td>
+			<td class="textoTab">
+				<font th:text=${votante.correo}></font>
+			</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
