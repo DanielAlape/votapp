@@ -9,11 +9,26 @@
   padding: 1px auto;
 }
 
+#atRes{
+	text-align: center;
+}
+#mostvot{
+	text-align: center;
+	width:100%;
+}
 #addVot {
   width: 40%;
   background-color: antiquewhite;
   margin: 2px auto;
   padding: 1px auto;
+}
+
+#conTab{
+  width: 700px;
+  text-align: center;
+  margin: 2px auto;
+  padding: 1px auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .textClass {
