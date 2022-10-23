@@ -11,14 +11,14 @@
 
 <body id="addVot">
 	<div class="textClass">
-		<h3>Registrar Votante</h3>
+		<h2>Registrar Votante</h2>
 	</div>
 	<br>
 	<form th:action="@{/saveVotante}" method="post" th:object=${votante}>
 		<div id="conForm">
 			<div class="mb-3">
 				<label for="labidentificacion" class="form-label">Identificación:</label>
-				<input type="text" class="form-control" name="identificacion" id="identificacion"
+				<input type="number" class="form-control" name="identificacion" id="identificacion"
 					aria-describedby="identificacionHelp" required>
 				<div id="identificacionHelp" class="form-text">Digite el número de Identificación del Votante</div>
 			</div>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="lablugarNac" class="form-label">Lugar de Nacimiento:</label>
-				<select>
+				<select class="form-select" aria-label="Default select example">
 					<option value="1">Bogotá D.C</option>
 					<option value="2">Barranquilla</option>
 					<option value="3">Bucaramanga</option>
@@ -62,7 +62,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="lablugarRes" class="form-label">Lugar de Residencia:</label>
-				<select>
+				<select class="form-select" aria-label="Default select example">
 					<option value="1">Bogotá D.C</option>
 					<option value="2">Barranquilla</option>
 					<option value="3">Bucaramanga</option>
@@ -76,7 +76,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="labmovil" class="form-label">Teléfono:</label>
-				<input type="text" class="form-control" name="movil" id="movil" aria-describedby="movilHelp" required>
+				<input type="number" class="form-control" name="movil" id="movil" aria-describedby="movilHelp" required>
 				<div id="movilHelp" class="form-text">Digite el teléfono movil del votante</div>
 			</div>
 			<div class="mb-3">
@@ -111,5 +111,7 @@
 			<!-- Botón Submit -->
 			<center><button type="submit" class="btn btn-outline-secondary">Agregar</button></center>
 			<br>
+	</form>
+</body>
 
 </html>
